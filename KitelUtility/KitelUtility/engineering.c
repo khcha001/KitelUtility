@@ -1,5 +1,7 @@
+#include "stdio.h"
 #include "engineering.h"
 #include "engineering_one.h"
+#include "engineering_oct.h"
 #include "select.h"
 void engineer_run();
 
@@ -51,6 +53,23 @@ void engineerHex() {
 
 }
 void engineerOct() {
-	printf("[공학용] 8진수 계산기를 선택하셨습니다.\n");
+	printf("[공학용] 8진수 계산기 입니다\n\n");
+	show_engineer_Oct();
+	int a, c, b;
+	printf("첫번째 숫자 입력하세요(8진수로)\n");
+	scanf_s("%o", &a);
+	printf("연산을 입력하세요\n");
+	scanf_s("%d", &b);
+	printf("두번째째 숫자 입력하세요(8진수로)\n");
+	scanf_s("%o", &c);
+	switch (b)
+	{
+	case 1: OctSum(a, c);break;
+	case 2: OctMinus(a, c);break;
+	case 3: OctMul(a, c);break;
+	case 4: OctDiv(a, c);break;
+	default: printf("잘못입력하셨습니다\n");
+	}
+	}
+	
 
-}
