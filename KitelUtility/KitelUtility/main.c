@@ -2,7 +2,7 @@
 #include "general.h"
 #include "engineering.h"
 #include "select.h"
-
+//託悪薄 さげいい
 void run();
 
 void main() {
